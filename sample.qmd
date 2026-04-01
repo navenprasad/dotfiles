@@ -1,0 +1,55 @@
+---
+title: "Gemini Quarto Comprehensive Test"
+format: html
+---
+
+## 0. Setup
+Run this cell first to load libraries.
+
+```{python}
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import warnings
+warnings.filterwarnings('ignore') # Silence warnings
+%matplotlib inline
+```
+
+## 1. Matrix Calculation
+Now this will be instantaneous.
+
+```{python}
+# Create two matrices
+A = np.array([[1, 2], [3, 4]])
+B = np.array([[5, 6], [7, 8]])
+
+# Perform Dot Product
+result = np.dot(A, B)
+print("Matrix A:\n", A)
+print("\nMatrix B:\n", B)
+print("\nResult (A ⋅ B):\n", result)
+```
+
+## 2. Table Demonstration
+```{python}
+data = {
+    'Category': ['A', 'B', 'C', 'D'],
+    'Values': [45, 72, 12, 93],
+    'Status': ['High', 'High', 'Low', 'High']
+}
+df = pd.DataFrame(data)
+df
+```
+
+## 3. Bar Graph (Seaborn)
+```{python}
+plt.figure(figsize=(12, 8))
+sns.set_theme(style="whitegrid")
+# Added hue and legend=False to fix the Seaborn warning
+ax = sns.barplot(x='Category', y='Values', hue='Category', data=df, palette='crest', legend=False)
+plt.title("Category Distribution", fontsize=16)
+plt.show()
+```
+
+```
