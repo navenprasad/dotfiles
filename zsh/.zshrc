@@ -36,3 +36,15 @@ else
 fi
 unset __mamba_setup
 # <<< mamba initialize <<<
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/navenprasad/.cache/lm-studio/bin"
+# End of LM Studio CLI section
+
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/navenprasad/.local/bin:$PATH"
+export PATH="/Users/navenprasad/.local/bin:$PATH"
+eval "$(~/.local/bin/mise activate zsh)"
+eval "$(~/.local/bin/mise activate zsh)"

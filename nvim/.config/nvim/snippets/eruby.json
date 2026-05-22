@@ -1,0 +1,17 @@
+{
+  "ERB Scriptlet": {
+    "prefix": "er",
+    "body": "<% ${1} %>$0",
+    "description": "<% %>"
+  },
+  "ERB Expression": {
+    "prefix": "ep",
+    "body": "<%= ${1} %>$0",
+    "description": "<%= %>"
+  },
+  "ERB Comment": {
+    "prefix": "ec",
+    "body": "<%# ${1} %>$0",
+    "description": "<%# %>"
+  }
+}

@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+# Yabai configuration
+# Managed by GNU Stow from ~/dotfiles/yabai/.yabairc
+
+# Tiling mode (BSP)
+yabai -m config layout bsp
+
+# Gaps & Padding
+# We use external_bar to reserve a consistent 40px at the top of ALL displays for Sketchybar.
+# This ensures that windows start at the same offset regardless of menu bar height or notches.
+yabai -m config external_bar   all:40:0
+yabai -m config top_padding    8
+yabai -m config bottom_padding 8
+yabai -m config left_padding   8
+yabai -m config right_padding  8
+yabai -m config window_gap     8
+
+# Appearance
+yabai -m config window_shadow off
+yabai -m config window_opacity off
+
+# Mouse follows focus
+yabai -m config mouse_follows_focus on
+
+# External bar (Sketchybar) logic can be handled here or in Sketchybar config
+# AeroSpace had: exec-on-workspace-change = ['sketchybar --trigger aerospace_workspace_change ...']
+# Yabai uses signals for this:
+yabai -m signal --add event=space_changed action="sketchybar --trigger space_change"
+yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"
+yabai -m signal --add event=window_created action="sketchybar --trigger window_change"
+yabai -m signal --add event=window_destroyed action="sketchybar --trigger window_change"
+
+echo "yabai configuration loaded.."

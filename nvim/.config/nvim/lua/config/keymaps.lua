@@ -9,3 +9,4 @@ map("i", "aa", "<Esc>", { silent = true, desc = "jj to escape" })
 
 map("n", "<leader>rr", "<cmd>luafile $MYVIMRC<cr>", { desc = "Reload Neovim config" })
 map("n", "jk", ":", { desc = "Command-line mode" })
+map("n", "<leader>t", function() Snacks.terminal.toggle() end, { desc = "Terminal" })
